@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>mf_desenvolvimento_dev_backend</RootNamespace>
     <UserSecretsId>a0a63d9c-7751-4e41-b93f-a88d78b530fa</UserSecretsId>
@@ -10,8 +10,40 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\NovaPasta1\**" />
+    <Compile Remove="wwwroot\NovaPasta2\**" />
+    <Compile Remove="wwwroot\NovaPasta\**" />
+    <Content Remove="wwwroot\NovaPasta1\**" />
+    <Content Remove="wwwroot\NovaPasta2\**" />
+    <Content Remove="wwwroot\NovaPasta\**" />
+    <EmbeddedResource Remove="wwwroot\NovaPasta1\**" />
+    <EmbeddedResource Remove="wwwroot\NovaPasta2\**" />
+    <EmbeddedResource Remove="wwwroot\NovaPasta\**" />
+    <None Remove="wwwroot\NovaPasta1\**" />
+    <None Remove="wwwroot\NovaPasta2\**" />
+    <None Remove="wwwroot\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Veículo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Privacy.cshtml" />
+    <Content Remove="wwwroot\css\home.cs" />
+    <Content Remove="wwwroot\img" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
   </ItemGroup>
 
 </Project>
